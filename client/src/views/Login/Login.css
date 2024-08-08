@@ -1,3 +1,14 @@
+.login-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.login-img{
+    display: block;
+    margin:auto;
+    height: 200px;
+}
 .form-heading{
     text-align: center;
 }
@@ -8,8 +19,8 @@
     display: block;
     box-shadow: 2px 5px 15px 2px #aaa;
     margin: auto;
-    height: 350px;
-    width: 400px;
+    /* height: 350px; */
+    width: 350px;
     border-radius:10px ;
 }
 

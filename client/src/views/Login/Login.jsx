@@ -3,6 +3,8 @@ import "./Login.css"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import toast, {Toaster} from 'react-hot-toast'
+import loginbg from "./loginbg.png"
+import logo from './logo.png'
 
 function Login() {
   const [email, setemail] = useState('')
@@ -30,9 +32,19 @@ function Login() {
 
   return (
     <div>
+      <div className='login-div'>
+      <div style={{justifyContent:"center"}}>
+        <img src={logo} style={{height:"70px",display:"block", marginTop:"25%"}} alt="" />
+      <h1 style={{textAlign:"center",marginTop:"5%",fontSize:"30px"}}>Welcome...😉</h1>
+      <h2 style={{fontSize:"22px",textAlign:"center"}}>Log in to Shorten Your Path</h2>
+      <span>
+      "Effortlessly transform long URLs into compact, shareable links with our innovative URL shortener.</span>
+      </div>
+      <div>
       <h1 className='form-heading'>User Login</h1>
 
       <form className='link-form1'>
+      <img className='login-img' src={loginbg} alt="" />
         <input
           type='email'
           placeholder='Email'
@@ -58,6 +70,8 @@ function Login() {
         
         <Link to='/Signup' className='reference-links'>Don't have an account? Signup</Link>
       </form>
+      </div>
+      </div>
 
      
 
