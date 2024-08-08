@@ -1,0 +1,94 @@
+.link-card{
+    width: 600px;
+    
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 1px #a3a3a3;
+}
+.link-card-title{
+    /* position: absolute; */
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 30px;
+
+
+}
+
+.link-card-short-url a{
+    text-decoration: none;
+    margin-left: 10%;
+    font-size: 16px;
+    margin-bottom: 100px;
+
+}
+.link-card-target-url a{
+    text-decoration:  none;
+    margin-left: 10%;
+    color: black;
+    font-size: 15px;
+    margin-top: 40px;
+}
+.cpy-btn{
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    top: 10px;
+    padding: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    right: 10px;
+}
+.cpy-btn:hover{
+    background-color: #d0cfcf;
+    transition: .4s;
+}
+.delt-btn{
+    position: absolute;
+    font-size: 10px;
+    top: 10px;
+    padding: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    right: 85px;
+}
+.delt-btn:hover{
+    background-color: rgb(255, 86, 57);
+    transition: .4s;
+}
+.share-btn{
+    position: absolute;
+    font-size: 10px;
+    top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    right: 120px;
+}
+.share-btn:hover{
+    background-color: rgb(72, 168, 227);
+    transition: .4s;
+}
+.link-card-created-at{
+    position: absolute;
+    bottom: 10px;
+    margin-top: 30px;
+    right: 10px;
+}
+.link-card-views{
+    display: flex;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

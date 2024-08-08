@@ -1,0 +1,102 @@
+.Title{
+    text-align: center;
+    margin-top:20px ;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.sub-title{
+    text-align: center;
+    font-size: 45px;
+}
+.title-img{
+    height: 25px;
+    margin-left:5px;
+    margin-right: 10px;
+}
+
+.main-div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.link-form{
+    background-color: aliceblue;
+    padding: 20px;
+    position: relative;
+    display: block;
+    box-shadow: 2px 5px 15px 2px #aaa;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+    border-radius:10px ;
+}
+
+.link-inputs{
+    /* height: 20px;
+    width: 90%;
+    padding: 10px;
+    margin: 5px auto; */
+    /* border-radius: 10px;
+    outline: none;
+    border: 1px solid #a3a3a3; */
+}
+.form-control{
+    height: 20px;
+    width: 90%;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #a3a3a3;
+}
+.title-1{
+    color: #272343;
+    font-size: 50px;
+}
+
+.register-btn{
+    background-color: #ff751a;
+    padding: 10px 20px;
+    display: block;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.register-btn:hover{
+    background-color: rgb(71, 251, 71);
+    transition: .3s ease-in-out;
+}
+
+.img-div{
+    position: relative;
+    display: block;
+    margin: auto;
+}
+.bg-img{
+    height: 500px;
+   
+}
+.links-div{
+    position: relative;
+    border-radius: 10px;
+    margin: 30px 20px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 15px 5px #a3a3a3;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link-error{
+    display: block;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    font-style: bold;
+    padding: 50px;
+    color: #a3a3a3;
+}
