@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./LinksCard.css";
+import toast,{Toaster} from 'react-hot-toast';
 import QRCode from 'react-qr-code'
-import copyIcon from "./img/copy.png";
 import calendar from "./img/schedule.png";
 import delet from "./img/delete.png";
 import share from "./img/share.png";
@@ -9,19 +9,41 @@ import titlei from "./img/broken-link.png"
 import short from "./img/foreign.png"
 import traget from "./img/target.png"
 import show from "./img/show.png"
+import checkIcon from "./img/checked.png"
 
-function copyUrl(id) {
-  const copyElement = document.getElementById(`shorturl-${id}`);
-  const copyText = copyElement.href;
-  navigator.clipboard.writeText(copyText).then(() => {
-    alert("URL copied to clipboard!");
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
-  });
-}
+
+
 
 function LinksCard({ id, title, slug, target, views, createdAt }) {
   const shortUrl = `${import.meta.env.VITE_API_BACKEND_URL}/${slug}`;
+  const [shared, setShared] = useState(false);
+
+const shareUrl = async () => {
+  try {
+    await navigator.share({
+      title: title,
+      text: shortUrl,
+      url: shortUrl,
+    });
+    setShared(true);
+    setTimeout(() => {
+      setShared(false);
+    }, 5000);
+  } catch (error) {
+    console.error("Error sharing URL:", error);
+  }
+};
+  const [copied, setcopied] = useState(false)
+  const copyUrl = async ()=>{
+    navigator.clipboard.writeText(shortUrl)
+    setcopied(true)
+    toast.success("URL Copied To Clipbord")
+    setTimeout(()=>{
+      setcopied(false)
+    },2000)
+    
+  }
+
 
   return (
     <div className='link-card'>
@@ -54,12 +76,29 @@ function LinksCard({ id, title, slug, target, views, createdAt }) {
       <button className='delt-btn'>
         <img src={delet} style={{ height: "22px" }} alt="" />
       </button>
-      <button className='share-btn'>
-        <img src={share} style={{ height: "15px" }} alt="" />
-      </button>
-      <button className='cpy-btn' onClick={() => copyUrl(id)}>
-        <img src={copyIcon} style={{ height: "16px" }} alt="" />Copy Url
-      </button>
+      <button className='share-btn' onClick={shareUrl}>
+  {shared ? (
+    <span>
+      <img src={checkIcon} style={{ height: "16px" }} alt="" />
+    </span>
+  ) : (
+    <img src={share} style={{ height: "15px" }} alt="" />
+  )}
+</button>
+      <button className='cpy-btn' onClick={copyUrl}>
+    {copied ? (
+      <span>
+        {/* <img src={checkIcon} style={{ height: "16px" }} alt="" /> Copied! */}
+        <span>✅Copied..!</span>
+      </span>
+    ) : (
+      // <img src={copyIcon} style={{ height: "16px" }} alt="" />
+      <span>
+       🔗Copy Url
+      </span>
+    )}
+  </button>
+      <Toaster/>
     </div>
   );
 }
