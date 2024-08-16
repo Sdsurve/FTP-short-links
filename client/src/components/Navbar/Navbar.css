@@ -6,9 +6,10 @@
     top: 0;
     left: 0;
     margin-bottom: 50px;
+    background-color: aliceblue;
     right: 0;
-    padding: auto;
-    /* border: 1px solid black; */
+    box-shadow: 1px 2px 10px 2px #aaa;
+    padding: 10px 0;
     z-index: 99;
 }
 .navbar-toggler{
@@ -38,17 +39,9 @@
 .navbar-collapse{
     display: flex
 }
-/* .mid-div{
-    display: flex;
-} */
 .navbar-nav{
     display: flex;
 }
-/* .web-nm{
-    display: block;
-    /* position: absolute; */
-   
-/* } */
 .nav-sec{
     margin-left: 500px;
 }

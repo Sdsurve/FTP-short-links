@@ -5,6 +5,8 @@ import axios from 'axios'
 import toast, {Toaster} from 'react-hot-toast'
 import loginbg from "./loginbg.png"
 import logo from './logo.png'
+import Navbar from "./../../components/Navbar/Navbar.jsx"
+import Footer from '../../components/Footer/Footer.jsx'
 
 function Login() {
   const [email, setemail] = useState('')
@@ -32,10 +34,11 @@ function Login() {
 
   return (
     <div>
+      <Navbar/>
       <div className='login-div'>
       <div style={{justifyContent:"center"}}>
-        <img src={logo} style={{height:"70px",display:"block", marginTop:"25%"}} alt="" />
-      <h1 style={{textAlign:"center",marginTop:"5%",fontSize:"30px"}}>Welcome...😉</h1>
+        <img src={logo} style={{height:"70px",display:"block", marginTop:"25%",marginLeft:"28%"}} alt="" />
+      {/* <h1 style={{textAlign:"center",marginTop:"5%",fontSize:"30px"}}>Welcome...😉</h1> */}
       <h2 style={{fontSize:"22px",textAlign:"center"}}>Log in to Shorten Your Path</h2>
       <span>
       "Effortlessly transform long URLs into compact, shareable links with our innovative URL shortener.</span>
@@ -73,7 +76,7 @@ function Login() {
       </div>
       </div>
 
-     
+     <Footer/>
 
       <Toaster />
     </div>

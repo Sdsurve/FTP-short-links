@@ -92,3 +92,8 @@ hr{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.qr{
+    position: absolute;
+    top:40%;
+    right: 20px;
+}

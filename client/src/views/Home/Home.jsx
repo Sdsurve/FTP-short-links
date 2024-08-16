@@ -86,7 +86,7 @@ function Home() {
     };
 
     return (
-        <div>
+        <div style={{padding:"0",margin:"0"}}>
             <Navbar/>
 
             <h2 className='sub-title'>

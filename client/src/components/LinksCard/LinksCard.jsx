@@ -1,5 +1,6 @@
 import React from 'react';
 import "./LinksCard.css";
+import QRCode from 'react-qr-code'
 import copyIcon from "./img/copy.png";
 import calendar from "./img/schedule.png";
 import delet from "./img/delete.png";
@@ -39,6 +40,9 @@ function LinksCard({ id, title, slug, target, views, createdAt }) {
           </a>
         </p>
       </div>
+      {
+        <QRCode value= {`${import.meta.env.VITE_API_BACKEND_URL}/${slug}`} size={50} className='qr'/>
+      }
 
       <div className='link-card-views'>
         Views: {views} <img src={show} style={{ height: "18px", marginLeft: "5px" }} alt="" />

@@ -21,7 +21,7 @@
 }
 
 .link-form{
-    background-color: aliceblue;
+    background-color: #e3f6f5;
     padding: 20px;
     position: relative;
     display: block;
@@ -30,16 +30,6 @@
     height: 350px;
     width: 450px;
     border-radius:10px ;
-}
-
-.link-inputs{
-    /* height: 20px;
-    width: 90%;
-    padding: 10px;
-    margin: 5px auto; */
-    /* border-radius: 10px;
-    outline: none;
-    border: 1px solid #a3a3a3; */
 }
 .form-control{
     height: 20px;
@@ -82,7 +72,7 @@
     position: relative;
     border-radius: 10px;
     margin: 30px 20px;
-    background-color: aliceblue;
+    background-color: #e3f6f5;
     box-shadow: 2px 2px 15px 5px #a3a3a3;
     padding: 20px;
     display: flex;

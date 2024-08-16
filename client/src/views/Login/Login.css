@@ -1,6 +1,7 @@
 .login-div{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 8%;
     justify-content: space-around;
 
 }
